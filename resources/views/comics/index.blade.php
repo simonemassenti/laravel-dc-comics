@@ -2,6 +2,13 @@
 
 @section('content')
     <div class="container">
+        <h2 class="text-center">Lista fumetti</h2>
+        
+        <div class="text-end">
+            <a href="{{ route('comics.create') }}" class="btn btn-success">Aggiungi nuovo fumetto</a>
+        </div>
+        
+
         <table class="table table-striped">
             <thead>
                 <tr>
