@@ -9,6 +9,7 @@
     {{-- Importiamo la parte di js e sass tramite vite --}}
     @vite('resources/js/app.js')
 </head>
+    @include('partials.header');
 <body>
     <main>
         @yield('content')
