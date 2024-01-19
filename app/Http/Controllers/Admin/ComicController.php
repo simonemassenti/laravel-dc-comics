@@ -76,7 +76,9 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -88,7 +90,20 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $form_data = $request->all();
+        
+        $comic_to_update = Comic::findOrFail($id);
+        $comic_to_update->title = $form_data['title'];
+        $comic_to_update->description = $form_data['description'];
+        $comic_to_update->thumb = $form_data['thumb'];
+        $comic_to_update->price = $form_data['price'];
+        $comic_to_update->series = $form_data['series'];
+        $comic_to_update->sale_date = $form_data['sale_date'];
+        $comic_to_update->type = $form_data['type'];
+
+        $comic_to_update->save();
+
+        return redirect()->route('comics.show', ['comic' => $comic_to_update->id]);
     }
 
     /**
@@ -99,6 +114,9 @@ class ComicController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comic_to_delete = Comic::findOrFail($id);
+        $comic_to_delete->delete();
+
+        return redirect()->route('comics.index')->with('message', 'Hai eliminato "'.$comic_to_delete->title . '"');
     }
 }
