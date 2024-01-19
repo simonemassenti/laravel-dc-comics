@@ -16,7 +16,7 @@
                   <p class="card-text"><div>
                     <h6> <strong>Prezzo:</strong> {{ $comic->price }} </h6>
                     <h6> <strong>Serie:</strong> {{ $comic->series }} </h6>
-                    <h6> <strong>Data di vendita:</strong> {{ $comic->sale_date }} </h6>
+                    <h6> <strong>Data di uscita:</strong> {{ $comic->sale_date }} </h6>
                     <h6> <strong>Tipologia:</strong> {{ $comic->type }} </h6>
                   </div></p>
                 </div>

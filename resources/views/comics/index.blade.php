@@ -15,7 +15,7 @@
                     <th scope="col">Titolo</th>
                     <th scope="col">Prezzo</th>
                     <th scope="col">Serie</th>
-                    <th scope="col">Data di Vendita</th>
+                    <th scope="col">Data di Uscita</th>
                     <th scope="col">Tipologia</th>
                     <th scope="col">Azioni</th>
                 </tr>
