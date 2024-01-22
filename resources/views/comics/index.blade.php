@@ -39,10 +39,12 @@
                                     class="btn btn-warning mx-1">Modifica</a>
 
 
-                                <form class="deleteForm" action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+                                <form class="deleteForm" action="{{ route('comics.destroy', ['comic' => $comic->id]) }}"
+                                    method="POST">
                                     @method('DELETE')
                                     @csrf
-                                    <button type="submit" class="btn btn-danger mx-1 btnDelete" value="{{ $comic->title }}">Elimina</button>
+                                    <button type="submit" class="btn btn-danger mx-1 btnDelete"
+                                        value="{{ $comic->title }}">Elimina</button>
                                 </form>
                         </td>
                     </tr>
@@ -51,17 +53,17 @@
         </table>
     </div>
 
-        <div class="confermationModal m-auto border p-3 fixed-top top-50 start-50 translate-middle bg-warning d-none">
-            <div>
-                <p class="text-center msg-delete">
-                    
-                </p>
-            </div>
+    <div class="confermationModal m-auto border p-3 fixed-top top-50 start-50 translate-middle bg-warning d-none">
+        <div>
+            <p class="text-center msg-delete">
 
-            <div class="mx-auto w-50">
-                <button class="cancella btn btn-danger">Si, cancella</button>
-                <button class="annulla btn btn-secondary">No, non cancellare</button>
-            </div>
-
+            </p>
         </div>
+
+        <div class="mx-auto w-50">
+            <button class="cancella btn btn-danger">Si, cancella</button>
+            <button class="annulla btn btn-secondary">No, non cancellare</button>
+        </div>
+
+    </div>
 @endsection
